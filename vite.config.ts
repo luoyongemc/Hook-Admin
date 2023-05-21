@@ -10,7 +10,11 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
 // @see: https://vitejs.dev/config/
 export default defineConfig((mode: ConfigEnv): UserConfig => {
+	console.log(mode, "modexxxx");
+
 	const env = loadEnv(mode.mode, process.cwd());
+	console.log(env, "environment");
+
 	const viteEnv = wrapperEnv(env);
 
 	return {
